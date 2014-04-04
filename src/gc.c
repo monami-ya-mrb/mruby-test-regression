@@ -15,7 +15,7 @@ mrb_gc_protect_stress_test(mrb_state *mrb, mrb_value self)
 {
   mrb_value val = mrb_str_new(mrb, "test", 4);
 
-  while(mrb->arena_idx <= MRB_ARENA_SIZE)
+  while(mrb->arena_idx <= MRB_GC_ARENA_SIZE)
     mrb_gc_protect(mrb, val);
 
   mrb_garbage_collect(mrb);
