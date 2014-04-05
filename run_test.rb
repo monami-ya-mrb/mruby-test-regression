@@ -24,6 +24,7 @@ MRuby::Build.new do |conf|
 
   conf.cc.defines = %w(MRB_GC_FIXED_ARENA)
 
-  conf.gem :git => 'https://github.com/monami-ya-mrb/mruby-test-regression.git'
   conf.gembox 'default'
+
+  conf.gem File.expand_path(File.dirname(__FILE__))
 end
