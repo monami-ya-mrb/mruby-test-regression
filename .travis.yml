@@ -3,6 +3,9 @@ env:
   - MRUBY_REPO=https://github.com/mruby/mruby.git MRUBY_BRANCH=master
   - MRUBY_REPO=https://bitbucket.org/monami_ya_mrb/monami-ya.mrb.git MRUBY_BRANCH=master
   - MRUBY_REPO=https://bitbucket.org/monami_ya_mrb/monami-ya.mrb.git MRUBY_BRANCH=develop
-
 script:
-  - "ruby run_test.rb all test"
+- ruby run_test.rb all test
+notifications:
+  hipchat:
+    rooms:
+      secure: h03wObqD5bwg8PfJ12xpqqYHdpo/cxKlG4RLMn6NO8Ly/kPa4AgHYqGu+QTRdv+q+VLqvULCMfVcm/MePLJ2BKMd8apAlJ1rusjIW/WiO0rfPl2uoOzeU9SR9U195QxJKlK3sQ0wnuMDG3ViMhTP5n6oOlgK4qjzMlVoRdWnBlk=
